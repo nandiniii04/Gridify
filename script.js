@@ -41,11 +41,11 @@ function renderGrid(list){
 }
 
 function filterGrid(){
-  const cat = category.value;                 // get selected category
+  const cat = category.value;                 
   const search = searchInput.value.toLowerCase();
 
   const filtered = projects.filter(p=>{
-    const catCheck = cat === "all" || p.category === cat;  // category check
+    const catCheck = cat === "all" || p.category === cat;  
     const searchCheck = p.name.toLowerCase().includes(search) || p.desc.toLowerCase().includes(search);
     return catCheck && searchCheck;
   });
@@ -69,7 +69,7 @@ document.querySelectorAll(".grid-item").forEach(item => {
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    const tiltX = ((y - centerY) / centerY) * 10; // max 10 deg
+    const tiltX = ((y - centerY) / centerY) * 10; 
     const tiltY = ((x - centerX) / centerX) * 10;
     item.style.transform = `rotateX(${-tiltX}deg) rotateY(${tiltY}deg)`;
   });
@@ -85,4 +85,5 @@ toggle.onclick = () => {
   document.body.classList.toggle("dark");
   toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 };
+
 
