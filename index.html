@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gridify – Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">GRIDIFY</div>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search projects..." />
+    <select id="category">
+      <option value="all">All</option>
+      <option value="web">Web</option>
+      <option value="design">Design</option>
+      <option value="app">App</option>
+    </select>
+  </div>
+
+  <div class="header-actions">
+    <button id="modeToggle" aria-label="Toggle mode">🌙</button>
+    <select id="themeSwitcher">
+      <option value="pink">Pink</option>
+      <option value="blue">Blue</option>
+      <option value="lavender">Lavender</option>
+    </select>
+  </div>
+</header>
+
+<!-- ===== HERO (CLEAN & BALANCED) ===== -->
+<section class="hero">
+  <span class="hero-badge">✨ Portfolio</span>
+
+  <h1 class="hero-title">
+    Creative <span>Work Gallery</span>
+  </h1>
+
+  <p class="hero-subtitle">
+    A modern glassmorphism portfolio to showcase your projects with style
+  </p>
+</section>
+
+<!-- ===== SECTION INTRO ===== -->
+<section class="section-intro">
+  <h3>Featured Projects</h3>
+  <p>Explore selected works crafted with modern UI and smooth interactions</p>
+</section>
+
+<!-- ===== PROJECT GRID ===== -->
+<section id="grid" class="grid-container"></section>
+
+<!-- ===== MODAL ===== -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <img id="modal-img" src="" alt="Project Preview" />
+    <h4 id="modal-title"></h4>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
