@@ -7,7 +7,7 @@ Gridify is designed to be lightweight, scalable, and easy to customize, making i
 
 ---
 
-## 🔹 (Introduction)
+## 🔹 
 
 At **Gridify**, we believe that **design should be simple, structured, and meaningful**. A well-organized grid not only improves visual appeal but also enhances user experience and readability.
 
