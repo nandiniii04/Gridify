@@ -9,9 +9,9 @@ Gridify is designed to be lightweight, scalable, and easy to customize, making i
 
 ## 🔹 
 
-At **Gridify**, we believe that **design should be simple, structured, and meaningful**. A well-organized grid not only improves visual appeal but also enhances user experience and readability.
+At **Gridify**, I believe that **design should be simple, structured, and meaningful**. A well-organized grid not only improves visual appeal but also enhances user experience and readability.
 
-Our vision is to create digital interfaces that:
+My vision is to create digital interfaces that:
 
 * Feel modern yet minimal
 * Work seamlessly across all devices
