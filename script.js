@@ -21,13 +21,13 @@ const modalCategory = document.getElementById("modal-category");
 const closeBtn = document.getElementById("close");
 const noResults = document.getElementById("noResults");
 
-// Theme and Mode
+
 const modeToggle = document.getElementById("modeToggle");
 const themeSwitcher = document.getElementById("themeSwitcher");
 const moonIcon = document.querySelector(".moon-icon");
 const sunIcon = document.querySelector(".sun-icon");
 
-// Get emoji for category
+
 function getEmoji(cat) {
   if (cat === 'web') return '🌐';
   if (cat === 'app') return '📱';
@@ -35,7 +35,7 @@ function getEmoji(cat) {
   return '💼';
 }
 
-// Render grid
+
 function renderGrid(list) {
   grid.innerHTML = "";
   
@@ -50,7 +50,7 @@ function renderGrid(list) {
     const div = document.createElement("div");
     div.className = "grid-item";
     
-    // Split name into words for animation
+   
     const nameWords = p.name.split(' ');
     const nameHTML = nameWords.map(word => `<span>${word} </span>`).join('');
     
@@ -76,7 +76,7 @@ function renderGrid(list) {
     grid.appendChild(div);
   });
 
-  // Add click listeners to view buttons
+  
   document.querySelectorAll(".overlay button").forEach(btn => {
     btn.addEventListener("click", () => {
       const proj = projects.find(p => p.id == btn.dataset.id);
@@ -85,7 +85,7 @@ function renderGrid(list) {
   });
 }
 
-// Open modal
+
 function openModal(proj) {
   modal.classList.add("show");
   modalImg.className = `modal-img ${proj.category}`;
@@ -96,7 +96,7 @@ function openModal(proj) {
   modalCategory.className = 'category-badge';
 }
 
-// Filter grid
+
 function filterGrid() {
   const cat = category.value;
   const search = searchInput.value.toLowerCase();
@@ -110,17 +110,17 @@ function filterGrid() {
   renderGrid(filtered);
 }
 
-// Event listeners for filtering
+
 category.addEventListener("change", filterGrid);
 searchInput.addEventListener("input", filterGrid);
 
-// Modal controls
+
 closeBtn.addEventListener("click", () => modal.classList.remove("show"));
 window.addEventListener("click", e => { 
   if (e.target == modal) modal.classList.remove("show"); 
 });
 
-// Dark/Light Mode Toggle
+
 modeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   const isDark = document.body.classList.contains("dark");
@@ -134,18 +134,19 @@ modeToggle.addEventListener("click", () => {
   }
 });
 
-// Theme Switcher
+
 themeSwitcher.addEventListener("change", (e) => {
   const selectedTheme = e.target.value;
   
-  // Remove all theme classes
+  
   document.body.classList.remove("theme-pink", "theme-blue", "theme-lavender");
   
-  // Add selected theme class
+  
   if (selectedTheme !== "pink") {
     document.body.classList.add(`theme-${selectedTheme}`);
   }
 });
 
-// Initial render
+
 renderGrid(projects);
+
